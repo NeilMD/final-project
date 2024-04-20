@@ -1,0 +1,373 @@
+body{
+    background-color: #fffefa;
+    color: #444;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+/* Header Section */
+.header-container{ 
+    padding: 1.2rem .5rem;
+    /* position: fixed;
+    width:-webkit-fill-available; */
+    background:rgba(0,0,0,0.6);
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: right;
+    z-index: 99;
+}
+
+.header-list ul, .header-list li{
+    display: inline;
+    
+}
+
+.header-list li{
+   margin: 0rem .5rem;
+    
+}
+
+.header-list li a {
+    color: white;
+    font-size: 1rem;
+}
+/* Hero Section */
+
+.hero-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/dog-banner.jpg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-logo {
+    width: 40rem;
+}
+
+.hero-text {
+    text-align: center;
+    margin-left: 4rem;
+    color: black;
+    width: 40rem;
+}
+
+.hero-text h1, 
+.hero-text h2,
+.hero-text p{
+    line-height: inherit;
+    color: beige;
+}
+
+.hero-text h2 {
+    font-weight: 200;
+}
+
+/* Content Section */
+
+.content-container{
+    background-color: unset;
+    height: inherit;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+
+.content-message {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-message button {
+    border: none;
+    width: 8rem;
+    height: 2rem;
+    background-color: #eee;
+    color: #444;
+}
+
+.content-message button:hover {
+    background-color: #ccc;
+    transition: 0.4s;
+}
+
+.content-image img {
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+.content-message button a {
+    color: #444;
+    text-decoration: none;
+}
+
+/* Card Section */
+.card-container {
+    padding: 3rem 1.5rem;
+}
+
+.card {
+    background: none;
+    border-radius: 0.25rem;
+    width: 24rem;
+    list-style-type: none;
+}
+
+.card-wrapper{
+  max-width: 90rem;
+  margin: auto;
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap; 
+    padding: 3rem 0;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card-date {
+    padding: 1rem 0;
+}
+
+.card-header {
+    padding: 1rem 0;
+    color: #344165;
+}
+
+.card-description {
+    font-weight: 200;
+    width: 24rem; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical; 
+}
+
+.card-link {
+    color: #344165;
+}
+
+.card img {
+    border: none;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Video Section */
+
+.video-container{
+   margin: 3rem auto;
+   padding: 3rem 1.5rem;
+   max-width: 90rem;
+}
+
+.video-message{
+    text-align: left;
+}
+
+.iframe-wrapper {
+    text-align: center;
+    
+}
+
+.video-iframe iframe{
+    width: 70%;
+    height: 70%;
+    aspect-ratio: 16/9;
+}
+
+.video-iframe p {
+    padding: 3rem 2rem;
+    font-weight: 200;
+}
+
+/* Accordion Section */
+
+.accordion-container {
+    background-color: unset;
+    height: unset;
+}
+
+.accordion-header {
+    padding-bottom: 3rem;
+}
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+  }
+ 
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+.active-panel {
+    display: block;
+    color: #444;
+}
+
+.panel p {
+    font-weight: 200;
+}
+
+/* Footer Section */
+.footer-container {
+    background-color: #fdf0e6; 
+    height: unset;
+    color: #444;
+}
+.footer-wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 3rem;
+}
+
+.footer-message {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.footer-icons {
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.footer-message a {
+    color: #444;
+    text-decoration: none;
+}
+
+.footer-copyright {
+    margin: auto;
+}
+
+.footer-map {
+    width: 50%;
+    margin: auto;
+}
+
+
+
+/*
+    Screen less than 1200px
+
+    - Adjust the content section so that the image is above the message
+    - Hide the map, and maximize the width of the footer information
+*/
+@media ( width <= 1200px) {
+    .hero-img {
+        flex-direction: column;
+    }
+
+    .hero-container {
+        height: inherit;
+    }
+
+    .hero-text {
+        text-align: center;
+        padding-top: 3rem;
+    }
+
+    .content{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .footer-message {
+        width: 100%;
+    }
+
+    .footer-wrapper {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .footer-map {
+        display: none;
+    }
+}
+
+/**
+    Screen less than 600px
+
+**/
+
+@media ( width <= 600px) {
+    .hero-logo {
+        width: inherit;
+    }
+
+    .hero-text {
+        width: inherit;
+        margin: unset;
+    }
+
+}
+
+/**
+    Screen less than 400px
+
+    - Hide the image in the content section
+    - Turn the information in the footer into 1 column display
+
+**/
+
+@media ( width <= 400px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        line-height: unset;
+    }
+    .header-container {
+        display: none;
+    }
+
+    .content-image {
+        display: none;
+    }
+
+    .footer-message {
+        width: 100%;
+        flex-direction: column;
+    }
+
+}
