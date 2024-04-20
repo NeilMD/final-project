@@ -123,6 +123,10 @@ body{
     list-style-type: none;
 }
 
+.card img:hover{
+    cursor: pointer;
+}
+
 .card-wrapper{
   max-width: 90rem;
   margin: auto;

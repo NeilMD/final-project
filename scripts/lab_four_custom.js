@@ -21,6 +21,15 @@ accordions.forEach((acco) => {
   };
 });
 
+// Get all elements with class "card"
+var cards = document.querySelectorAll('.card img');
+
+// Loop through each element and add a click event listener
+cards.forEach(function(card) {
+    card.addEventListener('click', function() {
+        alert(`You clicked the ${card.alt}`);
+    });
+});
 
 /*
     Copyright Javascript
